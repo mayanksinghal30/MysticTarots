@@ -1,0 +1,988 @@
+@font-face {
+font-family:"ComicSansMS";
+src: url('../../../assets/comic.eot');
+src: local('Comic Sans MS'),
+	 url('../../../assets/comic.eot?#iefix') format('embedded-opentype'),
+     url('../../../assets/comic.woff') format('woff'),
+     url('../../../assets/comic.ttf') format('truetype'),
+     url('../../../assets/comic.svg#webfont') format('svg');
+}
+
+html,body,div,p,span{
+	margin:0px;
+	border-collapse: collapse;
+}
+
+body{
+    background-repeat: no-repeat;
+    font-family: "ComicSansMs";
+    font-size: 22px;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    overflow: hidden;
+    margin: 0px;
+}
+
+#container{
+	position:absolute;
+    overflow: hidden;
+    background: white;
+    width:800px;
+	height:600px;
+	-webkit-transform:scale(1);
+    -webkit-transform-origin: left top;
+    -moz-transform: scale(1);
+    -moz-transform-origin: left top;
+    -ms-transform: scale(1);
+    -ms-transform-origin: left top;
+    -o-transform: scale(1);
+    -o-transform-origin: left top;
+    transform: scale(1);
+    transform-origin: left top;
+}
+
+#loader{
+	position:absolute;
+	width:800px;
+	height:600px;
+	text-align:center;
+	color: white;
+    background:black;
+}
+
+#loading {
+    position: absolute;
+    font-size: 45px;
+    top: 215px;
+    left: 180px;
+}
+
+#preLoadedImage{
+	position:absolute;
+	width: 50px;
+	height: 50px;
+	top: 225px;
+	left: 400px;
+}
+
+#content{
+	display: none;
+	width:798px;
+	height:598px;
+	border: 1px solid black;
+	border-radius: 10px;
+}
+
+#intro_page {
+    display: none;
+    position: absolute;
+    width: 798px;
+    height: 598px;
+    border: 1px solid black;
+    border-radius: 8px;
+}
+
+#landing_page {
+    position: absolute;
+    width: 798px;
+    height: 598px;
+    display: none;
+    border: 1px solid black;
+    border-radius: 8px;
+}
+
+#endScreen {
+    display: none;
+    position: absolute;
+    width: 796px;
+    height: 55px;
+    top: 268px;
+    background: blue;
+    color: white;
+    font-weight: bold;
+}
+
+#endScreenText {
+    top: 13px;
+    position: absolute;
+    left: 274px;
+}
+
+#remedial_title {
+    position: absolute;
+    top: 80px;
+    width: 800px;
+    background: blue;
+    color: white;
+    font-size: 32px;
+    height: 50px;
+    text-align: center;
+}
+
+#clicktobegin {
+    position: absolute;
+    left: 649px;
+    top: 506px;
+    font-size: 26px;
+    padding-top: 10px;
+    width: 110px;
+    font-weight: bold;
+    height: 50px;
+    text-align: center;
+    cursor: pointer;
+    background: cornflowerblue;
+    vertical-align: middle;
+    color: white;
+    border: 1px solid cornflowerblue;
+    border-radius: 8px;
+}
+
+#clicktobegin:hover {
+    -webkit-transform:scale(1.1);
+    -o-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    transform: scale(1.1);    
+}
+
+#tarot1 {
+    position: absolute;
+    top: 171px;
+    left: 50px;
+}
+
+#tarot2 {
+    position: absolute;
+    top: 336px;
+    left: 48px;
+}
+
+#tarotcrd1 {
+    position: absolute;
+    top: 230px;
+    left: 300px;
+}
+
+#tarotcrd2 {
+    position: absolute;
+    top: 230px;
+    left: 420px;
+}
+
+#tarotcrd3 {
+    position: absolute;
+    top: 300px;
+    left: 300px;
+}
+
+#tarotcrd4 {
+    position: absolute;
+    top: 300px;
+    left: 420px;
+}
+
+.title {
+    position: absolute;
+    width: 796px;
+    height: 55px;
+    background: blue;
+    color: white;
+    font-weight: bold;
+    border: 1px solid black;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+}
+
+#level {
+    position: absolute;
+    left: 624px;
+    top: 14px;
+}
+
+.game_name {
+    position: absolute;
+    left: 60px;
+    top: 14px;
+}
+
+#click1 {
+    position: absolute;
+    font-size: 26px;
+    top: 150px;
+    width: 180px;
+    height: 65px;
+    left: 310px;
+}
+
+#click2 {
+    position: absolute;
+    font-size: 26px;
+    top: 250px;
+    width: 180px;
+    height: 65px;
+    left: 310px;
+}
+
+.click_levels {
+    text-align: center;
+    cursor: pointer;
+    background: cornflowerblue;
+    vertical-align: middle;
+    color: white;
+    border: 1px solid cornflowerblue;
+    border-radius: 8px;
+}
+
+.click_levels:hover {
+    -webkit-transform:scale(1.2);
+    -o-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    transform: scale(1.2);    
+}
+
+#click2 img {
+    padding-top: 5px;
+    padding-right: 5px;
+    position: absolute;
+    top: 5px;
+    left: 8px;
+}
+
+#click3 img {
+    padding-top: 5px;
+    padding-right: 5px;
+    position: absolute;
+    top: 5px;
+    left: 8px;
+}
+
+
+.btn_text {
+    vertical-align: middle;
+    position: absolute;
+    top: 12px;
+    left: 47px;
+}
+
+#click3 {
+    position: absolute;
+    font-size: 26px;
+    top: 350px;
+    width: 180px;
+    height: 65px;
+    left: 310px;
+}
+
+#tarot {
+    position: absolute;
+    left: 20px;
+    top: 70px;
+}
+
+#question {
+    position: absolute;
+    top: 80px;
+    left: 150px;
+    font-weight: bold;
+    color: blue;
+}
+
+#level1 {
+    position: absolute;
+    left: 140px;
+    top: 150px;
+    width: 310px;
+    height: 200px;
+    border: 1px solid black;
+    background: #C0C0C0;
+    border-radius: 8px;
+}
+
+#level2 {
+    position: absolute;
+    left: 140px;
+    display: none;
+    top: 150px;
+    width: 340px;
+    height: 250px;
+    border: 1px solid black;
+    background: #C0C0C0;
+    border-radius: 8px;
+}
+
+#level3 {
+    position: absolute;
+    display: none;
+    left: 120px;
+    top: 130px;
+    width: 425px;
+    height: 300px;
+    border: 1px solid black;
+    background: #C0C0C0;
+    border-radius: 8px;
+}
+
+#hint_points {
+    position: absolute;
+    font-size: 14px;
+    width: 237px;
+    height: 300px;
+    border: 1px solid black;
+    border-radius: 14px;
+    left: 553px;
+    top: 76px;
+}
+
+#pl {
+    position: absolute;
+    top: -1px;
+    left: 89px;
+    border-top-right-radius: 14px;
+    border: 1px solid black;
+    width: 147px;
+    text-align: center;
+}
+
+#hnt {
+    position: absolute;
+    left: -1px;
+    border-top-left-radius: 14px;
+    border: 1px solid black;
+    top: -1px;
+    text-align: center;
+    width: 89px;
+}
+
+#margn {
+    position: absolute;
+    top: 274px;
+    border: 1px solid black;
+    width: 237px;
+    height: 25px;
+    left: -1px;
+    border-bottom-left-radius: 14px;
+    border-bottom-right-radius: 14px;
+}
+
+#card_click {
+    position: absolute;
+    z-index: 5;
+    top: 28px;
+    left: 50px;
+}
+
+#clicktoprogress {
+    cursor: pointer;
+    position: absolute;
+    left: 600px;
+    top: 460px;
+}
+
+#next {
+    height: 165px;
+    width: 189px;
+    position: absolute;
+    left: 606px;
+    top: 300px;
+    display: none;
+}
+
+#next_text {
+    position: absolute;
+    top: 5px;
+    font-size: 18px;
+    color: red;
+}
+
+#ans_level1 {
+    position: absolute;
+    display: inline-block;
+    width: auto;
+    height: 50px;
+    top: 470px;
+    left: 50px;
+}
+
+#ans_level2 {
+    position: absolute;
+    display: none;
+    width: 450px;
+    height: 73px;
+    top: 470px;
+    left: 20px;
+}
+
+#ans_level3 {
+    position: absolute;
+    display: none;
+    width: 585px;
+    height: 73px;
+    top: 470px;
+    left: 5px;
+}
+
+#l1c1 {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+}
+
+#l1c2 {
+    position: absolute;
+    top: 25px;
+    left: 135px;
+}
+
+#l1c3 {
+    position: absolute;
+    top: 105px;
+    left: 25px;
+}
+
+#l1c4 {
+    position: absolute;
+    top: 105px;
+    left: 135px;
+}
+
+#l2c1 {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+}
+
+#l2c2 {
+    position: absolute;
+    top: 25px;
+    left: 110px;
+}
+
+#l2c3 {
+    position: absolute;
+    top: 25px;
+    left: 195px;
+}
+
+#l2c4 {
+    position: absolute;
+    top: 103px;
+    left: 25px;
+}
+
+#l2c5 {
+    position: absolute;
+    top: 103px;
+    left: 110px;
+}
+
+#l2c6 {
+    position: absolute;
+    top: 103px;
+    left: 195px;
+}
+
+#l2c7 {
+    position: absolute;
+    top: 181px;
+    left: 25px;
+}
+
+#l2c8 {
+    position: absolute;
+    top: 181px;
+    left: 110px;
+}
+
+#l2c9 {
+    position: absolute;
+    top: 181px;
+    left: 195px;
+}
+
+#l3c1 {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+}
+
+#l3c2 {
+    position: absolute;
+    top: 25px;
+    left: 110px;
+}
+
+#l3c3 {
+    position: absolute;
+    top: 25px;
+    left: 195px;
+}
+
+#l3c4 {
+    position: absolute;
+    top: 25px;
+    left: 280px;
+}
+
+#l3c5 {
+    position: absolute;
+    top: 90px;
+    left: 25px;
+}
+
+#l3c6 {
+    position: absolute;
+    top: 90px;
+    left: 110px;
+}
+
+#l3c7 {
+    position: absolute;
+    top: 90px;
+    left: 195px;
+}
+
+#l3c8 {
+    position: absolute;
+    top: 90px;
+    left: 280px;
+}
+
+#l3c9 {
+    position: absolute;
+    top: 155px;
+    left: 25px;
+}
+
+#l3c10 {
+    position: absolute;
+    top: 155px;
+    left: 110px;
+}
+
+#l3c11 {
+    position: absolute;
+    top: 155px;
+    left: 195px;
+}
+
+#l3c12 {
+    position: absolute;
+    top: 155px;
+    left: 280px;
+}
+
+#l3c13 {
+    position: absolute;
+    top: 220px;
+    left: 25px;
+}
+
+#l3c14 {
+    position: absolute;
+    top: 220px;
+    left: 110px;
+}
+
+#l3c15 {
+    position: absolute;
+    top: 220px;
+    left: 195px;
+}
+
+#l3c16 {
+    position: absolute;
+    top: 220px;
+    left: 280px;
+}
+
+#l1p1 {
+    position: absolute;
+    top: 34px;
+    left: 100px;
+}
+
+#l1p2 {
+    position: absolute;
+    top: 34px;
+    left: 210px;
+}
+
+#l1p3 {
+    position: absolute;
+    top: 114px;
+    left: 100px;
+}
+
+#l1p4 {
+    position: absolute;
+    top: 114px;
+    left: 210px;
+}
+
+#l2p1 {
+    position: absolute;
+    top: 34px;
+    left: 88px;
+}
+
+#l2p2 {
+    position: absolute;
+    top: 34px;
+    left: 174px;
+}
+
+#l2p3 {
+    position: absolute;
+    top: 34px;
+    left: 270px;
+}
+
+#l2p4 {
+    position: absolute;
+    top: 112px;
+    left: 88px;
+}
+
+#l2p5 {
+    position: absolute;
+    top: 112px;
+    left: 174px;
+}
+
+#l2p6 {
+    position: absolute;
+    top: 112px;
+    left: 270px;
+}
+
+#l2p7 {
+    position: absolute;
+    top: 190px;
+    left: 88px;
+}
+
+#l2p8 {
+    position: absolute;
+    top: 190px;
+    left: 174px;
+}
+
+#l2p9 {
+    position: absolute;
+    top: 190px;
+    left: 270px;
+}
+
+#l3p1 {
+    position: absolute;
+    top: 34px;
+    left: 88px;
+}
+
+#l3p2 {
+    position: absolute;
+    top: 34px;
+    left: 174px;
+}
+
+#l3p3 {
+    position: absolute;
+    top: 34px;
+    left: 258px;
+}
+
+#l3p4 {
+    position: absolute;
+    top: 34px;
+    left: 355px;
+}
+
+#l3p5 {
+    position: absolute;
+    top: 99px;
+    left: 88px;
+}
+
+#l3p6 {
+    position: absolute;
+    top: 99px;
+    left: 174px;
+}
+
+#l3p7 {
+    position: absolute;
+    top: 99px;
+    left: 258px;
+}
+
+#l3p8 {
+    position: absolute;
+    top: 99px;
+    left: 355px;
+}
+
+#l3p9 {
+    position: absolute;
+    top: 164px;
+    left: 88px;
+}
+
+#l3p10 {
+    position: absolute;
+    top: 164px;
+    left: 174px;
+}
+
+#l3p11 {
+    position: absolute;
+    top: 164px;
+    left: 258px;
+}
+
+#l3p12 {
+    position: absolute;
+    top: 164px;
+    left: 355px;
+}
+
+#l3p13 {
+    position: absolute;
+    top: 229px;
+    left: 88px;
+}
+
+#l3p14 {
+    position: absolute;
+    top: 229px;
+    left: 174px;
+}
+
+#l3p15 {
+    position: absolute;
+    top: 229px;
+    left: 258px;
+}
+
+#l3p16 {
+    position: absolute;
+    top: 229px;
+    left: 355px;
+}
+
+#l1q1 {
+    position: absolute;
+    top: 34px;
+    left: 245px;
+}
+
+#l1q2 {
+    position: absolute;
+    top: 114px;
+    left: 245px;
+}
+
+#l2q1 {
+    position: absolute;
+    top: 36px;
+    left: 300px;
+}
+
+#l2q2 {
+    position: absolute;
+    top: 113px;
+    left: 300px;
+}
+
+#l2q3 {
+    position: absolute;
+    top: 192px;
+    left: 300px;
+}
+
+#l3q1 {
+    position: absolute;
+    top: 34px;
+    left: 380px;
+}
+
+#l3q2 {
+    position: absolute;
+    top: 100px;
+    left: 380px;
+}
+
+#l3q3 {
+    position: absolute;
+    top: 164px;
+    left: 380px;
+}
+
+#l3q4 {
+    position: absolute;
+    top: 229px;
+    left: 380px;
+}
+
+.userans {
+    width: 40px;
+    height: 40px;
+}
+
+.ques_img {
+    margin-left: 15px;
+}
+
+.l1ans {
+    vertical-align: middle;
+    font-size: 26px;
+    text-align: center;
+    padding-top: 0px;
+    margin-right: 5px;
+}
+
+.l2ans {
+    vertical-align: middle;
+    font-size: 26px;
+    text-align: center;
+    padding-top: 0px;
+    margin-right: 0px;
+}
+
+.l3ans {
+    vertical-align: middle;
+    font-size: 26px;
+    text-align: center;
+    padding-top: 0px;
+    margin-right: 0px;
+}
+
+#submt {
+    position: absolute;
+    top: 540px;
+    left: 472px;
+    font-size: 20px;
+    width: 100px;
+    padding-top: 5px;
+    height: 39px;
+    text-align: center;
+    cursor: pointer;
+    background: cornflowerblue;
+    vertical-align: middle;
+    color: white;
+    border: 1px solid cornflowerblue;
+    border-radius: 8px;
+}
+
+#submt:hover {
+    -webkit-transform:scale(1.1);
+    -o-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    transform: scale(1.1);    
+}
+
+#instructions {
+    display: none;
+    position: absolute;
+    left: 20px;
+    top: 35px;
+}
+
+#kk {
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    top: 271px;
+    left: -1px;
+    width: 240px;
+    height: 36px;
+}
+
+#kk_text {
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    top: 280px;
+    width: 36px;
+    left: 103px;
+    text-align: center;
+}
+
+.promptContainer {
+	padding: 15px;
+	margin: 10px 0 0em;
+	color: #fff;
+	background: #075698; /* default background for browsers without gradient support */
+	/* css3 */
+	background: -webkit-gradient(linear, 0 0, 0 100%, from(#2e88c4), to(#075698));
+	background: -moz-linear-gradient(#2e88c4, #075698);
+	background: -o-linear-gradient(#2e88c4, #075698);
+	background: linear-gradient(#2e88c4, #075698);
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	position: absolute;
+	top: 200px;
+	left: 180px;
+	width: 340px;
+	cursor: default;
+	z-index: 2000;
+}
+
+#promptText {
+	/*float: left;*/
+	text-align: center;
+	margin: 10px 10px 5px 5px;
+	margin-bottom: 35px;
+}
+
+#screenModal {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height:600px;
+	 width:800px;
+	background-image: url(../assets/bg.png);
+	background-repeat: repeat;
+	display: none;
+	z-index: 2000;
+}
+
+#prompt_k {
+    width: 60px;
+    height: 35px;
+    margin-left: 144px;
+    font-size: 20px;
+}
+
+#hintHighlightEqn {
+    position: absolute;
+    top: 254px;
+    z-index: 4;
+    display: none;
+    left: 140px;
+    width: 310px;
+    height: 96px;
+    background: white;
+    border: 1px solid black;
+    border-radius: 8px;
+}
+
+#hintHighlightEqn1 {
+    position: absolute;
+    z-index: 4;
+    display: none;
+    top: 248px;
+    left: 140px;
+    width: 310px;
+    height: 102px;
+    background: white;
+    border: 1px solid black;
+    border-radius: 8px;
+}
+
+.hintImg {
+    height: 30px;
+    vertical-align: middle;
+}

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Mystic Tarots</title>
+		<link rel="stylesheet" 	type="text/css" href="../css/style.css">
+		<script src="../../../libs/jquery-1.7.1.min.js" type="text/javascript"></script>
+		<script src="../../../libs/PxLoader.js"	type="text/javascript"></script>
+		<script src="../../../libs/PxLoaderImage.js" type="text/javascript"></script>
+		<script src="../../../libs/loadxmldoc.js" type="text/javascript"></script>
+		<script src="../../../libs/common.js" type="text/javascript"></script>
+		<script src="../../../libs/jquery-ui-1.10.1.custom.min.js"></script>
+	    <script src="../../../libs/jquery_ui_touch.js"></script>
+        <script src="../../../libs/parameterPassing.js" type="text/javascript"></script>
+		<script src="../lib/script.js" type="text/javascript"></script>
+	</head>
+
+	<body  onresize="containerResize();" onload="containerResize();">
+	<div id="container">
+		<div id="loader" align="center">
+            <p id="loading">Loading...</p>
+            <img src="../assets/loader.gif" id="preLoadedImage" />
+        </div>
+        
+        <div id="screenModal">
+			<div class="promptContainer">
+				<div id="promptText"></div>
+				<button id="prompt_k" style="cursor: pointer" value="Ok">OK</button>
+			</div>
+		</div>
+
+        <div id="intro_page">
+            <p id="remedial_title"></p>
+            <img id="tarot1" src="../assets/tarot_cards_14.png" />
+            <img id="tarot2" src="../assets/tarot_cards_15.png" />
+            <img id="tarotcrd1" src="../assets/tarot_cards_1.png" />
+            <img id="tarotcrd2" src="../assets/tarot_cards_2.png" />
+            <img id="tarotcrd3" src="../assets/tarot_cards_3.png" />
+            <img id="tarotcrd4" src="../assets/tarot_cards_4.png" />
+            <div id="clicktobegin"></div>
+        </div>
+	    <div id="landing_page">
+            <p id="landing_title" class="title" style="text-align: center;font-size: 32px">
+            </p>
+            <div id="click1" class="click_levels" class="level_div"><span class="btn_text" id="click11"></span></div>
+            <div id="click2" class="click_levels" class="level_div"><img class="lock" id="lck_l2" src="../assets/lock2.png" /><span class="btn_text" id="click12"></span></div>
+            <div id="click3" class="click_levels" class="level_div"><img class="lock" id="lck_l3" src="../assets/lock2.png" /><span class="btn_text" id="click13"></span></div>
+        </div>
+        <div id="content">
+            <div class="hideDiv" id="hintHighlightEqn">
+            </div>
+            <div class="hideDiv" id="hintHighlightEqn1">
+            </div>
+            <div id="level1">
+                <img src="../assets/tarot_cards_1.png" id="l1c1" />
+                <p id="l1p1">+</p>
+                <img src="../assets/tarot_cards_1.png" id="l1c2" />
+                <p id="l1p2">=</p>
+                <p id="l1q1"></p>
+                <img src="../assets/tarot_cards_1.png" id="l1c3" />
+                <p id="l1p3">+</p>
+                <img src="../assets/tarot_cards_2.png" id="l1c4" />
+                <p id="l1p4">=</p>
+                <p id="l1q2"></p>
+            </div>
+
+            <div id="level2">
+                <img src="../assets/tarot_cards_1.png" id="l2c1" />
+                <p id="l2p1">+</p>
+                <img src="../assets/tarot_cards_1.png" id="l2c2" />
+                <p id="l2p2">+</p>
+                <img src="../assets/tarot_cards_1.png" id="l2c3" />
+                <p id="l2p3">=</p>
+                <p id="l2q1"></p>
+                <img src="../assets/tarot_cards_1.png" id="l2c4" />
+                <p id="l2p4">+</p>
+                <img src="../assets/tarot_cards_1.png" id="l2c5" />
+                <p id="l2p5">+</p>
+                <img src="../assets/tarot_cards_2.png" id="l2c6" />
+                <p id="l2p6">=</p>
+                <p id="l2q2"></p>
+                <img src="../assets/tarot_cards_1.png" id="l2c7" />
+                <p id="l2p7">+</p>
+                <img src="../assets/tarot_cards_2.png" id="l2c8" />
+                <p id="l2p8">+</p>
+                <img src="../assets/tarot_cards_3.png" id="l2c9" />
+                <p id="l2p9">=</p>
+                <p id="l2q3"></p>    
+            </div>
+
+            <div id="level3">
+                <img id="l3c1" />
+                <p id="l3p1">+</p>
+                <img id="l3c2" />
+                <p id="l3p2">+</p>
+                <img id="l3c3" />
+                <p id="l3p3">+</p>
+                <img id="l3c4" />
+                <p id="l3p4">=</p>
+                <p id="l3q1"></p>
+                <img id="l3c5" />
+                <p id="l3p5">+</p>
+                <img id="l3c6" />
+                <p id="l3p6">+</p>
+                <img id="l3c7" />
+                <p id="l3p7">+</p>
+                <img id="l3c8" />
+                <p id="l3p8">=</p>
+                <p id="l3q2"></p>
+                <img id="l3c9" />
+                <p id="l3p9">+</p>
+                <img id="l3c10" />
+                <p id="l3p10">+</p>
+                <img id="l3c11" />
+                <p id="l3p11">+</p>
+                <img id="l3c12" />
+                <p id="l3p12">=</p>
+                <p id="l3q3"></p>
+                <img id="l3c13" />
+                <p id="l3p13">+</p>
+                <img id="l3c14" />
+                <p id="l3p14">+</p>
+                <img id="l3c15" />
+                <p id="l3p15">+</p>
+                <img id="l3c16" />
+                <p id="l3p16">=</p>
+                <p id="l3q4"></p>
+            </div>
+            	
+            <div class="title">
+                <p class="game_name">
+                </p>
+                <p id="level">
+                </p>
+            </div>
+
+            <img id="tarot" src="../assets/tarot_cards_14.png" />
+            <p id="question">
+            </p>
+            <div id="hint_points">
+                <p id="hnt">
+                </p>
+                <p id="pl">
+                </p>
+                <p id="instructions">
+                </p>
+                <div id="margn">
+                </div>
+                <img id="kk" src="../assets/tarot_cards_9.png" />
+                <p id="kk_text"></p>    
+            </div>
+
+            <div id="endScreen">
+                <p id="endScreenText">Thanks For Playing..!!</p>
+            </div>
+
+            <span id="ans_level1">
+                <img class="ques_img l1ans" id="l1ques1" src="../assets/tarot_cards_1.png" />
+                <span class="l1ans" style="width: 20px">=</span>
+                <input id="l1ans1" pattern="[0-9]*" type="text" class="l1ans userans">
+                <img class="ques_img l1ans" id="l1ques2" src="../assets/tarot_cards_2.png" />
+                <span class="l1ans" style="width: 20px">=</span>
+                <input id="l1ans2" pattern="[0-9]*" type="text" class="l1ans userans">
+            </span>
+
+            <span id="ans_level2">
+                <img class="ques_img l2ans" id="l2ques1" src="../assets/tarot_cards_1.png" />
+                <span class="l2ans" style="width: 20px">=</span>
+                <input id="l2ans1" pattern="[0-9]*" type="text" class="l2ans userans">
+                <img class="ques_img l2ans" id="l2ques2" src="../assets/tarot_cards_2.png" />
+                <span class="l2ans" style="width: 20px">=</span>
+                <input id="l2ans2" pattern="[0-9]*" type="text" class="l2ans userans">
+                <img class="ques_img l2ans" id="l2ques3" src="../assets/tarot_cards_3.png" />
+                <span class="l2ans" style="width: 20px">=</span>
+                <input id="l2ans3" pattern="[0-9]*" type="text" class="l2ans userans">
+            </span>
+
+            <span id="ans_level3">
+                <img class="ques_img l3ans" id="l3ques1" src="../assets/tarot_cards_1.png" />
+                <span class="l3ans" style="width: 20px">=</span>
+                <input id="l3ans1" pattern="[0-9]*" type="text" class="l3ans userans">
+                <img class="ques_img l1ans" id="l3ques2" src="../assets/tarot_cards_2.png" />
+                <span class="l3ans" style="width: 20px">=</span>
+                <input id="l3ans2" pattern="[0-9]*" type="text" class="l3ans userans">
+                <img class="ques_img l3ans" id="l3ques3" src="../assets/tarot_cards_3.png" />
+                <span class="l3ans" style="width: 20px">=</span>
+                <input id="l3ans3" pattern="[0-9]*" type="text" class="l3ans userans">
+                <img class="ques_img l3ans" id="l3ques4" src="../assets/tarot_cards_4.png" />
+                <span class="l3ans" style="width: 20px">=</span>
+                <input id="l3ans4" pattern="[0-9]*" type="text" class="l3ans userans">
+            </span>
+
+            <div id="submt"></div>
+            <img src="../assets/tarot_cards_15.png" id="clicktoprogress" />
+            <div id="next">
+                <p id="next_text"></p>
+                <img src="../assets/tarot_cards_16.png" id="card_click" />
+            </div>
+        </div>
+    </div>
+<script>
+	var getParameters = getURLParameters();
+</script>
+
+</body>
+</html>
